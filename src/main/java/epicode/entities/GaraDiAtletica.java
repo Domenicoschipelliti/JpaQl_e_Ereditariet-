@@ -9,18 +9,19 @@ public class GaraDiAtletica extends Event{
     List<Person>setAtleti;
     Person vincitore;
 
-    public GaraDiAtletica(List<Person> setAtleti,Person vincitore) {
-        this.setAtleti = setAtleti;
+    public GaraDiAtletica( Person vincitore) {
         this.vincitore=vincitore;
+    }
+
+    public GaraDiAtletica(){
+
     }
 
     public List<Person> getSetAtleti() {
         return setAtleti;
     }
 
-    public void setSetAtleti(List<Person> setAtleti) {
-        this.setAtleti = setAtleti;
-    }
+
 
     public Person getVincitore() {
         return vincitore;
@@ -28,5 +29,13 @@ public class GaraDiAtletica extends Event{
 
     public void setVincitore(Person vincitore) {
         this.vincitore = vincitore;
+    }
+
+    @Override
+    public String toString() {
+        return "GaraDiAtletica{" +
+                "setAtleti=" + setAtleti +
+                ", vincitore=" + vincitore +
+                '}';
     }
 }

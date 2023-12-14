@@ -6,7 +6,9 @@ import java.util.List;
 
 @Entity
 @Table(name = "eventi")
-public class Event {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)//Inheritance è un annotazione che sta a specificare quale strategia utilizzare in una tabella padre e ne esistono 3:
+public class Event {//Single-Table,Joined e Table_Per_Class. Single=tutto in una tabella,Joined= tabelle divise con elementi non comuni dentro la propria tabella il resto
+    // nel padre,Table_Per_Class=ognuno per se, ogni classe sarà una tabella con suoi attributi.
     @Id
     @GeneratedValue
     private long id;

@@ -22,6 +22,10 @@ public class PartitaDiCalcio extends Event{
         this.squadraVincente=squadraVincente;
     }
 
+    public PartitaDiCalcio(){
+
+    }
+
     public int getNumeoroGolSquadraDiCasa() {
         return numeoroGolSquadraDiCasa;
     }
@@ -60,5 +64,16 @@ public class PartitaDiCalcio extends Event{
 
     public void setSquadraVincente(String squadraVincente) {
         this.squadraVincente = squadraVincente;
+    }
+
+    @Override
+    public String toString() {
+        return "PartitaDiCalcio{" +
+                "squadraDiCasa='" + squadraDiCasa + '\'' +
+                ", squadraOspite='" + squadraOspite + '\'' +
+                ", squadraVincente='" + squadraVincente + '\'' +
+                ", numeoroGolSquadraDiCasa=" + numeoroGolSquadraDiCasa +
+                ", numeroGolSquadraOspite=" + numeroGolSquadraOspite +
+                '}';
     }
 }
