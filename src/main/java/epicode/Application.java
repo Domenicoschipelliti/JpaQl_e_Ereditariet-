@@ -29,13 +29,13 @@ public class Application {
         // ******************** SALVATAGGIO LOCATIONS, UTENTI E EVENTI ************************
 
         Location location1 = new Location(faker.address().city(), faker.address().cityName());
-        // locationsDAO.save(location1);
+         locationsDAO.save(location1);
 
         Location location2 = new Location(faker.address().city(), faker.address().cityName());
-        // locationsDAO.save(location2);
+         locationsDAO.save(location2);
 
         Person person1 = new Person(faker.name().firstName(), faker.name().lastName(), faker.internet().emailAddress(),  LocalDate.now(), rndm.nextInt(0, 2) == 0 ? 'M' : 'F');
-        // peopleDAO.save(person1);
+         peopleDAO.save(person1);
 
 /*        for (int i = 0; i < 20; i++) {
             eventsDAO.save(new Event(
@@ -50,11 +50,11 @@ public class Application {
 
         // ******************** PARTECIPAZIONE AD UN EVENTO ************************
 
-        Person person = peopleDAO.findById(23);
-        Event event = eventsDAO.findById(24);
+        Person person = peopleDAO.findById(27);
+        Event event = eventsDAO.findById(28);
 
         Attendance partecipazione = new Attendance(person, event);
-        // attendancesDAO.save(partecipazione);
+         attendancesDAO.save(partecipazione);
 
         // Stampo eventi a cui partecipa la persona 23
         person.getListaPartecipazioni().forEach(System.out::println);
